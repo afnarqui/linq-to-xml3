@@ -20,8 +20,8 @@ public class WebService : System.Web.Services.WebService {
     }
 
     [WebMethod]
-    public string HelloWorld() {
-        return "Hola a todos";
+    public string Datos() {
+        return "devuelve un valor";
     }
     
 }
