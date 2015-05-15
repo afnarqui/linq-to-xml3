@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="desarrollo" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ANDRES-PC\SQL2012;Initial Catalog=desarrollo;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="desarrolloConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.copia" Member="copia">
+    <Type Name="copia">
+      <Column Name="cedulasociado" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="codnit" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="codempresa" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="coddependencia" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="periododeduce" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fechanacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deduceocacional" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="estudios" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="codprofesion" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="estadocivil" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="nroacta" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="fechaacta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="salario" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="codempresalabora" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="fechaingresoLabora" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tipocontrato" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="fechaterminacontrato" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cargo" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="codbanco" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="numerocuenta" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="agencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="codanalista" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="rutaanalista" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="tipocuenta" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="estado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ultimaactualizacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="operadoractualizo" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="paisnace" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="dptonace" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ciudadnace" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="idnits" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="idtipovivienda" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="szin" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="idtiposalario" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="tipopacto" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="web" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="idasociados" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigotipo" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
