@@ -19,9 +19,19 @@ public class WebService : System.Web.Services.WebService {
         //InitializeComponent(); 
     }
 
+
+
+    /// <summary>
+    /// andrés naranjo 2015-01-01 devuelve una lista de la entidad copia
+    /// </summary>
+    /// <returns></returns>
     [WebMethod]
-    public string Datos() {
-        return "devuelve un valor";
+    public List<copia> BuscarDatosCopia() {
+
+        DataClassesDataContext bd = new DataClassesDataContext();
+
+        return bd.copia.ToList();
+        
     }
     
 }
