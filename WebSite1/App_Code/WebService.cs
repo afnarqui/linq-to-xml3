@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.Services;
 
 /// <summary>
@@ -10,7 +11,7 @@ using System.Web.Services;
 [WebService(Namespace = "http://tempuri.org/")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // Para permitir que se llame a este servicio web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 
-// [System.Web.Script.Services.ScriptService]
+ [System.Web.Script.Services.ScriptService]
 public class WebService : System.Web.Services.WebService {
 
     public WebService () {
@@ -26,12 +27,23 @@ public class WebService : System.Web.Services.WebService {
     /// </summary>
     /// <returns></returns>
     [WebMethod]
-    public List<copia> BuscarDatosCopia() {
+    public List<copia> BuscarDatosCopiaxml(){
 
         DataClassesDataContext bd = new DataClassesDataContext();
 
         return bd.copia.ToList();
         
+    }
+
+
+    [WebMethod]
+    public string BuscarDatosCopiajson(){
+
+        DataClassesDataContext bd = new DataClassesDataContext();
+        JavaScriptSerializer js = new JavaScriptSerializer();
+        js.MaxJsonLength = Int32.MaxValue;
+        return js.Serialize(bd.copia.ToList());
+
     }
     
 }
